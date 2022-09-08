@@ -6,8 +6,10 @@ import {BsTrash, BsBookmarkCheck, BsBookmarkCheckFill} from "react-icons/bs"
 
 const API = "http://localhost:5000"
 
-
+//Projeto de lista 
 function App() {
+
+  //estados
   const [title, setTitle] = useState("")
   const [time, setTime] = useState('')
   const [todos, setTodos] = useState([])
@@ -20,6 +22,8 @@ function App() {
       
       setLoading(true)
 
+
+//requisição api
       const res = await fetch(`${API}/todos`)
       .then((res) => res.json())
       .then((data) => data)
